@@ -5,13 +5,18 @@
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
-    "build"
+    "build",
+    "README.md",
+    "LICENSE.md"
   ],
   "scripts": {
     "test": "jest test",
     "test:watch": "jest test --watch",
     "lint:fix": "prettier --write './{src,test}/**/*.{js,jsx}'",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "preversion": "npm test",
+    "version": "rm -rf build && npm run build",
+    "postversion": "git push --tags"
   },
   "keywords": [
     "flexbox",
@@ -21,6 +26,13 @@
   "author": {
     "name": "Maroun Baydoun",
     "url": "https://www.maroun-baydoun.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maroun-baydoun/reaflex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maroun-baydoun/reaflex/issues"
   },
   "license": "MIT",
   "devDependencies": {
