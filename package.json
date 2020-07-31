@@ -1,0 +1,56 @@
+{
+  "name": "reaflex",
+  "version": "0.0.0",
+  "description": "Easy Flexbox in React",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "test": "jest test",
+    "test:watch": "jest test --watch",
+    "lint:fix": "prettier --write './{src,test}/**/*.{js,jsx}'",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "flexbox",
+    "react",
+    "styled-components"
+  ],
+  "author": {
+    "name": "Maroun Baydoun",
+    "url": "https://www.maroun-baydoun.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.11.0",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-react": "7.10.4",
+    "@rollup/plugin-babel": "5.1.0",
+    "@rollup/plugin-commonjs": "14.0.0",
+    "@rollup/plugin-node-resolve": "8.4.0",
+    "@types/jest": "26.0.5",
+    "jest": "26.1.0",
+    "jest-styled-components": "6.3.4",
+    "prettier": "2.0.5",
+    "prop-types": "15.7.2",
+    "react": "16.8.0",
+    "react-dom": "16.8.0",
+    "react-test-renderer": "16.8.0",
+    "rollup": "2.23.0",
+    "rollup-plugin-peer-deps-external": "2.2.3",
+    "styled-components": "4.4.1"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15.7.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "styled-components": ">=4.4.1"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ]
+  }
+}
