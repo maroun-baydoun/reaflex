@@ -1,10 +1,16 @@
 import React from "react";
 import Renderer from "react-test-renderer";
 
-import Index from "../src/Flex";
+import Item from "../src/Item";
 
-describe("Index", () => {
-  const render = (props = {}) => Renderer.create(<Index {...props} />).toJSON();
+describe("Item", () => {
+  const render = (props = {}) => Renderer.create(<Item {...props} />).toJSON();
+
+  it("Sets order", () => {
+    const tree = render({ order: 1 });
+
+    expect(tree).toHaveStyleRule("order", "1");
+  });
 
   it("Renders a div element", () => {
     const tree = render();
