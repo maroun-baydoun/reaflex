@@ -12,6 +12,12 @@ describe("Item", () => {
     expect(tree).toHaveStyleRule("order", "1");
   });
 
+  it("Sets align-self", () => {
+    const tree = render({ alignSelf: "flex-end" });
+
+    expect(tree).toHaveStyleRule("align-self", "flex-end");
+  });
+
   it("Renders a div element", () => {
     const tree = render();
 
