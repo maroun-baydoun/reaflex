@@ -1,17 +1,16 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import {
-  CSSGlobals,
-  BaseLinePosition,
-  SelfPosition,
-} from "./css";
+import { CSSGlobals, BaseLinePosition, SelfPosition } from "./css";
+
+const isNumberOrString = (value) =>
+  typeof value === "number" || typeof value === "string";
 
 const Item = styled("div")`
-  ${({ order }) =>
-    (typeof order === "number" || typeof order === "string") &&
-    `order: ${order};`}
+  ${({ order }) => isNumberOrString(order) && `order: ${order};`}
   ${({ alignSelf }) => alignSelf && `align-self: ${alignSelf};`}
+  ${({ grow }) => isNumberOrString(grow) && `flex-grow: ${grow};`}
+  ${({ shrink }) => isNumberOrString(shrink) && `flex-shrink: ${shrink};`}
 `;
 
 Item.propTypes = {
@@ -27,6 +26,8 @@ Item.propTypes = {
     ...SelfPosition.map((pos) => `unsafe ${pos}`),
     ...CSSGlobals,
   ]),
+  grow: PropTypes.oneOfType([PropTypes.oneOf(CSSGlobals), PropTypes.number]),
+  shrink: PropTypes.oneOfType([PropTypes.oneOf(CSSGlobals), PropTypes.number]),
 };
 
 export default Item;

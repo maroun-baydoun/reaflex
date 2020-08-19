@@ -18,6 +18,18 @@ describe("Item", () => {
     expect(tree).toHaveStyleRule("align-self", "flex-end");
   });
 
+  it("Sets flex-grow", () => {
+    const tree = render({ grow: 1 });
+
+    expect(tree).toHaveStyleRule("flex-grow", "1");
+  });
+
+  it("Sets flex-shrink", () => {
+    const tree = render({ shrink: 1 });
+
+    expect(tree).toHaveStyleRule("flex-shrink", "1");
+  });
+
   it("Renders a div element", () => {
     const tree = render();
 
