@@ -30,6 +30,12 @@ describe("Item", () => {
     expect(tree).toHaveStyleRule("flex-shrink", "1");
   });
 
+  it("Sets flex-basis", () => {
+    const tree = render({ basis: "100px" });
+
+    expect(tree).toHaveStyleRule("flex-basis", "100px");
+  });
+
   it("Renders a div element", () => {
     const tree = render();
 
