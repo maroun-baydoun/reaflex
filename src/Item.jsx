@@ -12,6 +12,7 @@ const Item = styled("div")`
   ${({ grow }) => isNumberOrString(grow) && `flex-grow: ${grow};`}
   ${({ shrink }) => isNumberOrString(shrink) && `flex-shrink: ${shrink};`}
   ${({ basis }) => basis && `flex-basis: ${basis};`}
+  ${({ flex }) => isNumberOrString(flex) && `flex: ${flex};`}
 `;
 
 Item.propTypes = {
@@ -30,6 +31,7 @@ Item.propTypes = {
   grow: PropTypes.oneOfType([PropTypes.oneOf(CSSGlobals), PropTypes.number]),
   shrink: PropTypes.oneOfType([PropTypes.oneOf(CSSGlobals), PropTypes.number]),
   basis: PropTypes.string,
+  flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default Item;

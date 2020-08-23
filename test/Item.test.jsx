@@ -36,6 +36,12 @@ describe("Item", () => {
     expect(tree).toHaveStyleRule("flex-basis", "100px");
   });
 
+  it("Sets flex", () => {
+    const tree = render({ flex: 1 });
+
+    expect(tree).toHaveStyleRule("flex", "1");
+  });
+
   it("Renders a div element", () => {
     const tree = render();
 
