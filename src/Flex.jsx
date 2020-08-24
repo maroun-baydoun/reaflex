@@ -6,6 +6,7 @@ import {
   BaseLinePosition,
   ContentPosition,
   SelfPosition,
+  Direction,
   Wrap,
 } from "./css";
 
@@ -18,18 +19,13 @@ const Flex = styled("div")`
   ${({ justifyContent }) =>
     justifyContent && `justify-content: ${justifyContent};`}
   ${({ wrap }) => wrap && `flex-wrap: ${wrap};`}
+  ${({ flow }) => flow && `flex-flow: ${flow};`}
 `;
 
 Flex.propTypes = {
   as: PropTypes.string,
   inline: PropTypes.bool,
-  direction: PropTypes.oneOf([
-    "row",
-    "column",
-    "row-reverse",
-    "column-reverse",
-    ...CSSGlobals,
-  ]),
+  direction: PropTypes.oneOf([...Direction, ...CSSGlobals]),
   alignItems: PropTypes.oneOf([
     "normal",
     "stretch",
@@ -51,6 +47,18 @@ Flex.propTypes = {
     ...CSSGlobals,
   ]),
   wrap: PropTypes.oneOf([...Wrap, ...CSSGlobals]),
+  flow: PropTypes.oneOf([
+    ...Wrap,
+    ...Direction,
+    ...Direction.reduce(
+      (flow, direction) => [
+        ...flow,
+        ...Wrap.map((wrap) => `${direction} ${wrap}`),
+      ],
+      []
+    ),
+    ...CSSGlobals,
+  ]),
 };
 
 Flex.defaultProps = {

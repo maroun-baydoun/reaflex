@@ -42,6 +42,12 @@ describe("Flex", () => {
     expect(tree).toHaveStyleRule("flex-wrap", "wrap");
   });
 
+  it("Sets flex-flow", () => {
+    const tree = render({ flow: "column wrap" });
+
+    expect(tree).toHaveStyleRule("flex-flow", "column wrap");
+  });
+
   it("Renders a div element", () => {
     const tree = render();
 
