@@ -36,6 +36,12 @@ describe("Flex", () => {
     expect(tree).toHaveStyleRule("justify-content", "space-between");
   });
 
+  it("Sets flex-wrap", () => {
+    const tree = render({ wrap: "wrap" });
+
+    expect(tree).toHaveStyleRule("flex-wrap", "wrap");
+  });
+
   it("Renders a div element", () => {
     const tree = render();
 

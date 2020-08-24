@@ -21,3 +21,5 @@ export const ContentPosition = [
 ];
 
 export const BaseLinePosition = ["baseline", "first baseline", "last baseline"];
+
+export const Wrap = ["nowrap", "wrap", "wrap-reverse"];

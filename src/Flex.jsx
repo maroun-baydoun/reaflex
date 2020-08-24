@@ -6,6 +6,7 @@ import {
   BaseLinePosition,
   ContentPosition,
   SelfPosition,
+  Wrap,
 } from "./css";
 
 const Flex = styled("div")`
@@ -16,6 +17,7 @@ const Flex = styled("div")`
   ${({ alignItems }) => alignItems && `align-items: ${alignItems};`}
   ${({ justifyContent }) =>
     justifyContent && `justify-content: ${justifyContent};`}
+  ${({ wrap }) => wrap && `flex-wrap: ${wrap};`}
 `;
 
 Flex.propTypes = {
@@ -48,6 +50,7 @@ Flex.propTypes = {
     ...ContentPosition.map((pos) => `unsafe ${pos}`),
     ...CSSGlobals,
   ]),
+  wrap: PropTypes.oneOf([...Wrap, ...CSSGlobals]),
 };
 
 Flex.defaultProps = {
