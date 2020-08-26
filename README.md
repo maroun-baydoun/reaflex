@@ -31,9 +31,9 @@ import { Flex, Item } from "reaflex";
 const MyComponent = () => {
   return (
     <Flex direction="column" alignItems="center" justifyContent="center">
-      <Item>Hello</Item>
-      <Item>Flex</Item>
-      <Item>Box</Item>
+      <Item alignSelf="flex-end">Hello</Item>
+      <Item as="span">Flex</Item>
+      <Item alignSelf="flex-start">Box</Item>
     </Flex>
   );
 };

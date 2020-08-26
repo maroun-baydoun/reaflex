@@ -4,15 +4,17 @@
   "description": "Easy Flexbox in React",
   "main": "build/index.js",
   "module": "build/index.es.js",
+  "types": "types/index.d.ts",
   "files": [
     "build",
+    "types",
     "README.md",
     "LICENSE.md"
   ],
   "scripts": {
     "test": "jest test",
     "test:watch": "jest test --watch",
-    "lint:fix": "prettier --write './**/*.{js,jsx,md}'",
+    "lint:fix": "prettier --write './**/*.{js,jsx,md,d.ts}'",
     "build": "rollup -c",
     "preversion": "npm test",
     "version": "rm -rf build && npm run build",
@@ -43,6 +45,7 @@
     "@rollup/plugin-commonjs": "15.0.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "@types/jest": "26.0.5",
+    "@types/styled-components": "4.4.1",
     "jest": "26.4.2",
     "jest-styled-components": "6.3.4",
     "prettier": "2.0.5",
