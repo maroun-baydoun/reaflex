@@ -1,6 +1,6 @@
 module.exports = {
-  title: "",
-  description: "",
-  heading1: "",
-  heading2: "",
+  title: "reaflex",
+  description: "Easy Flexbox in React",
+  heading1: "reaflex",
+  heading2: "Easy Flexbox in React",
 };
