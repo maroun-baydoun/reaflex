@@ -49,7 +49,7 @@
     "react": true,
     "prismjs": {
       "languages": [
-        "javascript",
+        "jsx",
         "shell"
       ]
     }

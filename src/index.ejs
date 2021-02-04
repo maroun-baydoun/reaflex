@@ -20,14 +20,35 @@
         <h2><%= htmlWebpackPlugin.options.heading2 %></h2>
         <nav>
             <%if (htmlWebpackPlugin.options.githubLink) { %>
-            <a href="<%= htmlWebpackPlugin.options.githubLink %>" rel="external" title="View the source code on Github">Github</a>
+                <a href="<%= htmlWebpackPlugin.options.githubLink %>" rel="external"
+                    title="View the source code on Github">Github</a>
             <% } %>
             <%if (htmlWebpackPlugin.options.npmLink) { %>
-            <a href="<%= htmlWebpackPlugin.options.npmLink %>" rel="external" title="Get the package on npm">NPM</a>
+                <a href="<%= htmlWebpackPlugin.options.npmLink %>" rel="external"
+                    title="Get the package on npm">NPM</a>
             <% } %>
         </nav>
     </header>
     <main class="content">
+
+        <h3>1. Install</h3>
+        <pre><code class="language-shell">npm i reaflex</code></pre>
+        Or
+        <pre><code class="language-shell">yarn add reaflex</code></pre>
+
+        <h3>2. Use</h3>
+        <pre><code class="language-jsx">import { Flex, Item } from "reaflex";
+
+const MyComponent = () => {
+  return (
+    &lt;Flex direction="column" alignItems="center" justifyContent="center"&gt;
+        &lt;Item alignSelf="flex-end"&gt;Hello&lt;/Item&gt;
+        &lt;Item as="span"&gt;Flex&lt;/Item&gt;
+        &lt;Item alignSelf="flex-start"&gt;Box&lt;/Item&gt;
+    &lt;/Flex&gt;
+  );
+};
+            </code></pre>
         <div id="app"></div>
     </main>
     <footer class="footer">
@@ -35,16 +56,16 @@
             Created by <a href="https://maroun-baydoun.com">Maroun Baydoun</a>
         </div>
     </footer>
-    <%if (process.env.NODE_ENV === "production") { %>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62589493-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <%if (process.env.NODE_ENV==="production" ) { %>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62589493-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-        gtag('config', 'UA-62589493-1', { 'anonymize_ip': true });
-    </script>
-    <% } %>
+            gtag('config', 'UA-62589493-1', { 'anonymize_ip': true });
+        </script>
+        <% } %>
 </body>
 
 </html>
