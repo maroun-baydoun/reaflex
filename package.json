@@ -46,6 +46,12 @@
     "styled-components": "5.2.0"
   },
   "features": {
-    "react": true
+    "react": true,
+    "prismjs": {
+      "languages": [
+        "javascript",
+        "shell"
+      ]
+    }
   }
 }
