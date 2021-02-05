@@ -8,6 +8,9 @@ declare type FlexProps = {
   justifyContent?: string;
   wrap?: string;
   flow?: string;
+  gap?: string;
+  rowGap?: string;
+  columnGap?: string;
 };
 
 declare const Flex: StyledComponent<"div", object, FlexProps>;

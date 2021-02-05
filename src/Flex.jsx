@@ -20,6 +20,9 @@ const Flex = styled("div")`
     justifyContent && `justify-content: ${justifyContent};`}
   ${({ wrap }) => wrap && `flex-wrap: ${wrap};`}
   ${({ flow }) => flow && `flex-flow: ${flow};`}
+  ${({ gap }) => gap && `gap: ${gap};`}
+  ${({ rowGap }) => rowGap && `row-gap: ${rowGap};`}
+  ${({ columnGap }) => columnGap && `column-gap: ${columnGap};`}
 `;
 
 Flex.propTypes = {
@@ -59,6 +62,9 @@ Flex.propTypes = {
     ),
     ...CSSGlobals,
   ]),
+  gap: PropTypes.string,
+  rowGap: PropTypes.string,
+  columnGap: PropTypes.string,
 };
 
 Flex.defaultProps = {

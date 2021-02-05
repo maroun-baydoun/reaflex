@@ -48,6 +48,24 @@ describe("Flex", () => {
     expect(tree).toHaveStyleRule("flex-flow", "column wrap");
   });
 
+  it("Sets gap", () => {
+    const tree = render({ gap: "10px" });
+
+    expect(tree).toHaveStyleRule("gap", "10px");
+  });
+
+  it("Sets row-gap", () => {
+    const tree = render({ rowGap: "10px" });
+
+    expect(tree).toHaveStyleRule("row-gap", "10px");
+  });
+
+  it("Sets column-gap", () => {
+    const tree = render({ columnGap: "10px" });
+
+    expect(tree).toHaveStyleRule("column-gap", "10px");
+  });
+
   it("Renders a div element", () => {
     const tree = render();
 
