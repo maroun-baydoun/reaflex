@@ -5,4 +5,6 @@ module.exports = {
   heading2: "Easy Flexbox in React",
   githubLink: "https://github.com/maroun-baydoun/reaflex",
   npmLink: "https://www.npmjs.com/package/reaflex",
+  subPath: "reaflex/",
+  linkHome: true,
 };
