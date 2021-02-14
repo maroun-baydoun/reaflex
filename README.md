@@ -52,6 +52,9 @@ const MyComponent = () => {
 | justifyContent | string  | Sets the `justify-content` property.                                                                |
 | wrap           | string  | Sets the `flex-wrap` property.                                                                      |
 | flow           | string  | Sets the `flex-flow` property.                                                                      |
+| gap            | string  | Sets the `gap` property.                                                                            |
+| rowGap         | string  | Sets the `row-gap` property.                                                                        |
+| columnGap      | string  | Sets the `column-gap` property.                                                                     |
 
 ##### Item
 
