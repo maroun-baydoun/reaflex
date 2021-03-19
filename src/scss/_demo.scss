@@ -21,20 +21,25 @@
         background-color: #efefef;
 
         @include padding(1, 1);
-
-        &:not(:last-of-type) {
-          @include margin-right(2);
-        }
+        @include margin-horizontal(1);
       }
 
       &__column {
         .demo-box {
-        
-          &:not(:last-of-type) {
-            @include margin-bottom(2);
-            @include margin-right(0);
-          }
+          @include margin(1, 0);
         }
+      }
+    }
+
+    &--code {
+      display: none;
+
+      &__visible {
+        display: initial;
+      }
+
+      & + button {
+        @include margin-vertical(1);
       }
     }
   }
