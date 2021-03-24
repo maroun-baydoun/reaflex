@@ -47,7 +47,7 @@
     <main class="content">
         <p>Use reaflex to create flex rows and columns in your React components.</p>
         <hr class="hr--large"/>
-        <h3>1. Install</h3>
+        <h3 id="install">Install</h3>
         <pre class="syntax-highlight-container"><code class="language-shell">npm i reaflex</code></pre>
         Or
         <pre class="syntax-highlight-container"><code class="language-shell">yarn add reaflex</code></pre>
@@ -61,7 +61,7 @@
         </ul>
     
         <hr class="hr--large"/>
-        <h3>2. Use</h3>
+        <h3 id="use">Use</h3>
         <pre class="syntax-highlight-container"><code class="language-jsx">import { Flex, Item } from "reaflex";
 
 const MyComponent = () => {
@@ -73,11 +73,117 @@ const MyComponent = () => {
     &lt;/Flex&gt;
   );
 };</code></pre>
-<hr class="hr"/>
-<p>A detailed explanation of the props can be found <a href="https://github.com/maroun-baydoun/reaflex#props" rel="external noopener noreferrer" target="_blank">here</a>.</p>
         <hr class="hr--large"/>
-        <h3>Demo</h3>
-        <div id="demo"></div>
+        <h3 id="props">Props</h3>
+        <h4>Flex</h4>
+        <table class="table table--striped">
+            <thead>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="monospace">as</td>
+                    <td class="monospace">string</td>
+                    <td>The HTML tag to render. Defaults to <span class="monospace">div</span>.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">inline</td>
+                    <td class="monospace">boolean</td>
+                    <td>Sets the <span class="monospace">display</span> property to <span class="monospace">inline-flex</span> when <span class="monospace">true</span> and <span class="monospace">flex</span> otherwise. Defaults to <span class="monospace">false</span>.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">direction</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">flex-direction</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">alignItems</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">align-items</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">justifyContent</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">justify-content</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">wrap</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">flex-wrap</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">flow</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">flex-flow</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">gap</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">gap</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">rowGap</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">row-gap</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">columnGap</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">column-gap</span> property.</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr class="hr"/>
+        <h4>Item</h4>
+        <table class="table table--striped">
+            <thead>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="monospace">as</td>
+                    <td class="monospace">string</td>
+                    <td>The HTML tag to render. Defaults to <span class="monospace">div</span>.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">order</td>
+                    <td class="monospace">number</td>
+                    <td>Sets the <span class="monospace">order</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">alignSelf</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">align-self</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">grow</td>
+                    <td class="monospace">string | number</td>
+                    <td>Sets the <span class="monospace">flex-grow</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">shrink</td>
+                    <td class="monospace">string | number</td>
+                    <td>Sets the <span class="monospace">flex-shrink</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">basis</td>
+                    <td class="monospace">string</td>
+                    <td>Sets the <span class="monospace">flex-basis</span> property.</td>
+                </tr>
+                <tr>
+                    <td class="monospace">flex</td>
+                    <td class="monospace">string | number</td>
+                    <td>Sets the <span class="monospace">flex</span> property.</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr class="hr--large"/>
+        <h3 id="demo">Demo</h3>
+        <div id="demo-container"></div>
         <hr class="hr--large"/>
         <h3>Learn more</h3>
         <section>

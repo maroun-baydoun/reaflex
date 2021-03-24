@@ -108,4 +108,4 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, document.getElementById("demo"));
+ReactDOM.render(<Demo />, document.getElementById("demo-container"));
