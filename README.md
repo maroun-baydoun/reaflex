@@ -68,6 +68,11 @@ const MyComponent = () => {
 | basis     | string           | Sets the `flex-basis` property.            |
 | flex      | string or number | Sets the `flex` property.                  |
 
-#### License
+#### Demo
 
-MIT [Maroun Baydoun](https://maroun-baydoun.com)
+See it running in action in this [demo](https://dev.maroun-baydoun.com/reaflex/#demo).
+
+
+#### License
+MIT
+Copyright (c) [Maroun Baydoun](https://maroun-baydoun.com/).
