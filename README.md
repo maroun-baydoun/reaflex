@@ -45,7 +45,7 @@ const MyComponent = () => {
 
 | Prop           | Type    | Description                                                                                         |
 | -------------- | ------- | --------------------------------------------------------------------------------------------------- |
-| as             | string  | The HTML tag to render. Defaults to `div`.                                                          |
+| as             | React.ElementType  | The element to render. Defaults to `div`.                                                          |
 | inline         | boolean | Sets the `display` property to `inline-flex` when `true` and `flex` otherwise. Defaults to `false`. |
 | direction      | string  | Sets the `flex-direction` property.                                                                 |
 | alignItems     | string  | Sets the `align-items` property.                                                                    |
@@ -60,7 +60,7 @@ const MyComponent = () => {
 
 | Prop      | Type             | Description                                |
 | --------- | ---------------- | ------------------------------------------ |
-| as        | string           | The HTML tag to render. Defaults to `div`. |
+| as        | React.ElementType           | The element to render. Defaults to `div`. |
 | order     | number           | Sets the `order` property.                 |
 | alignSelf | string           | Sets the `align-self` property.            |
 | grow      | string or number | Sets the `flex-grow` property.             |
