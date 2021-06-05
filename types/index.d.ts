@@ -1,7 +1,8 @@
+import { ElementType } from "react";
 import { StyledComponent } from "styled-components";
 
 declare type FlexProps = {
-  as?: string;
+  as?: React.ElementType;
   inline?: boolean;
   direction?: string;
   alignItems?: string;
@@ -16,7 +17,7 @@ declare type FlexProps = {
 declare const Flex: StyledComponent<"div", object, FlexProps>;
 
 declare type ItemProps = {
-  as?: string;
+  as?: ElementType;
   order?: number;
   alignSelf?: string;
   grow?: string | number;

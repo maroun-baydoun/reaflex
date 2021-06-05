@@ -14,7 +14,7 @@
   "scripts": {
     "test": "jest test",
     "test:watch": "jest test --watch",
-    "lint:fix": "prettier --write './**/*.{js,jsx,md,d.ts}'",
+    "format": "prettier --write './**/*.{js,jsx,md,d.ts}'",
     "build": "rollup -c",
     "preversion": "npm test",
     "version": "rm -rf build && npm run build",

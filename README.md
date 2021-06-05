@@ -72,7 +72,7 @@ const MyComponent = () => {
 
 See it running in action in this [demo](https://dev.maroun-baydoun.com/reaflex/#demo).
 
-
 #### License
+
 MIT
 Copyright (c) [Maroun Baydoun](https://maroun-baydoun.com/).

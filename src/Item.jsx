@@ -16,7 +16,7 @@ const Item = styled("div")`
 `;
 
 Item.propTypes = {
-  as: PropTypes.string,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   order: PropTypes.number,
   alignSelf: PropTypes.oneOf([
     "auto",

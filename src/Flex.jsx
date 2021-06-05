@@ -26,7 +26,7 @@ const Flex = styled("div")`
 `;
 
 Flex.propTypes = {
-  as: PropTypes.string,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   inline: PropTypes.bool,
   direction: PropTypes.oneOf([...Direction, ...CSSGlobals]),
   alignItems: PropTypes.oneOf([
