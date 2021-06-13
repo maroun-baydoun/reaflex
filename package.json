@@ -48,7 +48,7 @@
     "prismjs": "1.23.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "reaflex": "1.0.0",
+    "reaflex": "1.1.1",
     "styled-components": "5.2.0"
   },
   "features": {
